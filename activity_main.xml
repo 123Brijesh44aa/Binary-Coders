@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="image bg"
+        android:foreground="@drawable/app_bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hello_bg" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:id="@+id/cardview"
+        app:cardMaxElevation="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="#9E000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/edit_image"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:padding="20dp"
+                android:background="@drawable/take_browse_style"
+                android:contentDescription="browse image"
+                android:src="@drawable/ic_pen_to_square_regular"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/take_picture"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="edit"
+                android:textColor="@color/white"
+                android:fontFamily="@font/baloo_bhai"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@id/edit_image"
+                app:layout_constraintEnd_toEndOf="@id/edit_image"
+                app:layout_constraintTop_toBottomOf="@id/edit_image"/>
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/take_picture"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:padding="20dp"
+                android:background="@drawable/take_browse_style"
+                android:contentDescription="take picture"
+                android:src="@drawable/ic_camera_solid"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/edit_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="camera"
+                android:textColor="@color/white"
+                android:fontFamily="@font/baloo_bhai"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@id/take_picture"
+                app:layout_constraintEnd_toEndOf="@id/take_picture"
+                app:layout_constraintTop_toBottomOf="@id/take_picture"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Art Room"
+                android:gravity="center"
+                android:fontFamily="@font/baloo_bhai"
+                android:textSize="40sp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/setting_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/take_browse_style"
+        android:contentDescription="setting button"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:src="@drawable/setting_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
